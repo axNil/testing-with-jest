@@ -1,0 +1,17 @@
+{
+  "name": "testing-with-jest",
+  "version": "1.0.0",
+  "description": "Best test fest with jest",
+  "main": "src/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest tests"
+  },
+  "author": "Axek Nilsson",
+  "license": "MIT",
+  "dependencies": {
+    "underscore": "^1.13.6"
+  }
+}
