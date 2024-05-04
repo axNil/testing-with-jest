@@ -44,7 +44,7 @@ describe('Pushing and poping "Johan"', () => {
     await driver.findElement(By.id("pop")).click();
     alert = await driver.switchTo().alert();
     const alertText = await alert.getText();
-    expect(alertText).toBe("Tog bort Anton");
+    expect(alertText).toBe("Tog bort Johan");
     await alert.accept();
   });
 });
