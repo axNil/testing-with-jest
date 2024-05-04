@@ -33,3 +33,18 @@ describe('Clicking "Pusha till stacken"', () => {
     await alert.accept();
   });
 });
+
+describe('Pushing and poping "Johan"', () => {
+  it("poping should open a prompt box containing top element", async () => {
+    await driver.findElement(By.id("push")).click();
+    let alert = await driver.switchTo().alert();
+    await alert.sendKeys("Johan");
+    await alert.accept();
+
+    await driver.findElement(By.id("pop")).click();
+    alert = await driver.switchTo().alert();
+    const alertText = await alert.getText();
+    expect(alertText).toBe("Tog bort Anton");
+    await alert.accept();
+  });
+});
