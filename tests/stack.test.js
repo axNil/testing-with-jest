@@ -22,7 +22,7 @@ test("push 3 elements and check the top elements with pop", () => {
   for (let i = 0; i < 3; i++) {
     stack.push(i);
   }
-  for (let i = 3; i >= 0; i--) {
+  for (let i = 2; i >= 0; i--) {
     expect(stack.peek()).toBeDefined();
     expect(stack.pop()).toBe(i);
   }
