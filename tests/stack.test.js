@@ -17,3 +17,13 @@ test("peek on stack with two or more elements returns the top element", () => {
   expect(stack.peek()).toBeDefined();
   expect(stack.peek()).toBe(42);
 });
+
+test("push 3 elements and check the top elements with pop", () => {
+  for (let i = 0; i < 3; i++) {
+    stack.push(i);
+  }
+  for (let i = 3; i >= 0; i--) {
+    expect(stack.peek()).toBeDefined();
+    expect(stack.pop()).toBe(i);
+  }
+});
